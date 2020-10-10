@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jg quiz</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<div id="gatherInfo"> 
+    <input type="text" placeholder="Type your name here!" class="inputs" id="input_name">
+    <input type="number" placeholder="Choose between 5-10 questions" class="inputs" id="input_question" min="5" max="10">
+
+    <button type="button" id="inputs_submit">Click here to submit and start quiz!</button>
+    
+</div>
+
+<div class="container_questions">
+<div class="questions"><p id="question">Frågor står här..?</p></div>
+</div>
+</br>
+
+
+<div id="container_answers">
+    
+</div>
+
+<div id="nextquestion">
+    Next question!
+</div>
+
+<div id="prevquestion">
+    Previous question!
+</div>
+
+
+
+<script src="js/main.js"></script>
+<script src="js/player.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
