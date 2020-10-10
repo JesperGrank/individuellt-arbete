@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         
     })
 
-
+    // Knapp som laddar om sidan.
+    let restart = document.getElementById("restart");
+    restart.addEventListener("click", function () {
+    window.location.reload();
+    })
 
     /*let inputs_submit = document.getElementById("inputs_submit"); DETTA ÄR ORIGINAL
     inputs_submit.addEventListener("click", function (e) {
