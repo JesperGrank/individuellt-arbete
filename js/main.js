@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     let player = new Player();
     let lista;
+    let currentIndex = 0;
 
     let inputs_submit = document.getElementById("inputs_submit");
     inputs_submit.addEventListener("click", function (e) {
@@ -17,6 +18,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log(player);
         
     })
+
+    let nextquestion = document.getElementById("nextquestion");
+        nextquestion.addEventListener("click", function(e){
+            currentIndex++;
+            lista[currentIndex].displayQuestion();
+
+        })
 
     // Knapp som laddar om sidan.
     let restart = document.getElementById("restart");

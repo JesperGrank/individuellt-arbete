@@ -4,20 +4,36 @@ class Quiz {
         this.answers = answers;
         this.correct_answers = correct_answers;
         this.question = question;
+        this.given_answers = [];
     }
 
     displayQuestion() {
         document.getElementById("question").innerHTML = this.question;
-    
+        let tabortdiv = document.getElementsByClassName("answers");
+        console.log(tabortdiv);
+
+        if(tabortdiv.length > 0){
+            for(const element of tabortdiv){
+                document.getElementById("container_answers").removeChild(element)
+            }
+        }
+       
+
+
         Object.values(this.answers).forEach(element => { //object.values gör om ett object till en array 
             if(element === null) return;
             let divSvar = document.createElement("div");
             divSvar.className="answers";
             document.getElementById("container_answers").appendChild(divSvar);
             divSvar.innerHTML = element;
+
+            divSvar.addEventListener("click", function(e){
+                console.log(divSvar)
+            })
         });
 
     }
+
     /*fetch(){
         let generera = document.getElementById("generera");
         generera.addEventListener("click", function (e) {
