@@ -21,7 +21,7 @@ class Quiz {
 
 
         Object.values(this.answers).forEach(element => { //object.values gör om ett object till en array 
-            if(element === null) return;
+            if(element === null) return; //Om svaren = null visas de ej-
             let divSvar = document.createElement("div");
             divSvar.className="answers";
             document.getElementById("container_answers").appendChild(divSvar);
